@@ -18,8 +18,7 @@
 
     # always loaded
     'data': [
-        'views/assets.xml',
-        'views/documents_views.xml',
+        'views/templates.xml',
     ],
 
 }
