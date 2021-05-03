@@ -19,6 +19,7 @@
     # always loaded
     'data': [
         'views/templates.xml',
+        'views/custom_template.xml',
     ],
 
 }
