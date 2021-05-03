@@ -4,7 +4,9 @@
 }
 
 .o_controller_with_searchpanel .o_search_panel {
-flex-basis: 400px;
+flex-basis: 200px;
+overflow: auto;
+white-space: nowrap;
 
 }
 
