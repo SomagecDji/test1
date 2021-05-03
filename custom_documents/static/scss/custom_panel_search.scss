@@ -5,7 +5,8 @@
 
 .o_controller_with_searchpanel .o_search_panel {
 flex-basis: 200px;
-overflow-x: scroll;
-
+}
+.o_search_panel_section .o_search_panel_category{
+    box-sizing: content-box;
 }
 
