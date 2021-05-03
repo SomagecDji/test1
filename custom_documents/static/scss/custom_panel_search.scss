@@ -6,7 +6,7 @@
 .o_controller_with_searchpanel .o_search_panel {
 flex-basis: 200px;
 }
-.o_search_panel_section .o_search_panel_category{
-    box-sizing: content-box;
+.o_controller_with_searchpanel .o_search_panel .list-group-item span.o_search_panel_label_title {
+    white-space: break-spaces;
 }
 
