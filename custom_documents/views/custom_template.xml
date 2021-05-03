@@ -7,7 +7,7 @@
     <li class="o_search_panel_category_value border-0 list-group-item" t-att-data-id="value.id" t-att-data-category-id="category.id">
         <header t-att-class="'list-group-item-action' + (value.id === category.activeValueId ? ' active' : '')">
             <label t-att-for="value.display_name" class="o_search_panel_label mb0">
-                <span class="o_search_panel_label_title" title="test 1"><t t-esc="value.display_name"/></span>
+                <span class="o_search_panel_label_title" title="test1"><t t-esc="value.display_name"/></span>
                 <i t-if="value.childrenIds.length" t-attf-class="fa fa-fw o_toggle_fold {{value.folded ? 'fa-caret-left' : 'fa-caret-down'}}"/>
             </label>
         </header>
