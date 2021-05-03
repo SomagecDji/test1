@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <data>
+
+    <template id="template_apply_inherit" inherit_id="website_hr_recruitment.apply">
+
+    <xpath expr="path_of_code_to_replace" position="replace">
+
+        <!-- your custom code -->
+
+    </xpath>
+
+    </template>
+
+    </data>
+
+</odoo>
