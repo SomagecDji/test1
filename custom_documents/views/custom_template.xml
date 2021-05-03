@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<template >
-
+<template id="template" xml:space="preserve">
+  <t t-name="SearchPanel.CategoryValues">
+   <t t-foreach="values" t-as="valueId">
+    <t t-set="value" t-value="category.values[valueId]"/>
+    <li class="o_search_panel_category_value border-0 list-group-item" t-att-data-id="value.id" t-att-data-category-id="category.id">
+        <header t-att-class="'list-group-item-action' + (value.id === category.activeValueId ? ' active' : '')">
+            <label t-att-for="value.display_name" class="o_search_panel_label mb0">
+                <span class="o_search_panel_label_title" title="test 1"><t t-esc="value.display_name"/></span>
+                <i t-if="value.childrenIds.length" t-attf-class="fa fa-fw o_toggle_fold {{value.folded ? 'fa-caret-left' : 'fa-caret-down'}}"/>
+            </label>
+        </header>
+        <ul t-if="!value.folded" class="list-group d-block">
+            <t t-call="SearchPanel.CategoryValues">
+                <t t-set="values" t-value="value.childrenIds"/>
+            </t>
+        </ul>
+    </li>
+</t>
+</t>
 </template>
 </odoo>
