@@ -2,7 +2,8 @@
     font-size:12px;
 }
 .o_search_panel_section{
-
-width:300px;
+overflow-x: auto;
+overflow-y: hidden;
+white-space: nowrap;
 }
 
