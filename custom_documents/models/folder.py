@@ -9,7 +9,7 @@ class DocumentFolder(models.Model):
         folders=self.env['documents.folder'].search([])
         for folder in folders:
             if folder.parent_folder_id:
-                parent_folder_id=folder.parent_folder_id.id
+                parent_folder_id=folder.parent_folder_id
                 parent_folder=self.env['documents.folder'].search(['id','=',parent_folder_id])
                 parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.read_group_ids])]})
                 parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.group_ids])]})
