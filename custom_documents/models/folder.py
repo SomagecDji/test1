@@ -13,9 +13,9 @@ class DocumentFolder(models.Model):
                 #raise UserError(_(folder.group_ids))
                 parent_folder=self.env['documents.folder'].search([('id','=',parent_folder_id)])
                 if folder.read_group_ids:
-                    parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.read_group_ids])]})
+                    parent_folder.write({'read_group_ids':[(4,folder.read_group_ids.id)]})
                 if folder.group_ids:
-                    parent_folder.write({'read_group_ids':[(4, [folder.group_ids.id])]})
+                    parent_folder.write({'read_group_ids':[(4,folder.group_ids.id)]})
         return()
             
 
