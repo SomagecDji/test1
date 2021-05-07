@@ -17,6 +17,7 @@ class DocumentFolder(models.Model):
                 if folder.group_ids:
                     parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.group_ids])]})
                     raise UserError(_(folder.group_ids))
+                    
         return()
             
 
