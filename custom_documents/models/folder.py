@@ -10,14 +10,12 @@ class DocumentFolder(models.Model):
         for folder in folders:
             if folder.parent_folder_id:
                 parent_folder_id=folder.parent_folder_id.id
-                raise UserError(_(folder.group_ids))
+                #raise UserError(_(folder.group_ids))
                 parent_folder=self.env['documents.folder'].search([('id','=',parent_folder_id)])
                 if folder.read_group_ids:
-                    raise UserError(_(folder.read_group_ids))
                     parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.read_group_ids])]})
                 if folder.group_ids:
-                    parent_folder.write({'read_group_ids':[(4, [group.id for group in folder.group_ids])]})
-                    raise UserError(_(folder.group_ids))
+                    parent_folder.write({'read_group_ids':[(4, [folder.group_ids.id])]})
         return()
             
 
